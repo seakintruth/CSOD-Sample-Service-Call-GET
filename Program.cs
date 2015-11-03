@@ -14,11 +14,11 @@ namespace Sample
     {
         static void Main(string[] args)
         {
-            var uri = new Uri(@"https://qa01.csod.com/services/api/CsodUser/1");
+            var uri = new Uri(@"https://<yourportal>.csod.com/services/api/CsodUser/1");
             var request = WebRequest.Create(uri);
 
-            var sessionToken = "1e7s0kob976h";
-            var sessionTokenSecret = "4gSg+W2cftuFOyWbweBPvgTjCmgNPSH/6HCBmeASp/tjIIX8S9mp5bZfOqOCHpnP1IoV7Eet8yA484RzEhfnuA==";
+            var sessionToken = "<your Session Token goes here eg: 1e7s0kob976h>";
+            var sessionTokenSecret = "<your Session Token Secret goes here eg: 4gSg+W2cftuFOyWbweBPvgTjCmgNPSH/6HCBmeASp/jtIIX8S9mp5bZfOqOCHpnP1IoV7Eet8yA484RzEhfnuA==>";
 
             request.Headers.Add("x-csod-date", DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.000"));
             request.Headers.Add("x-csod-session-token", sessionToken);
